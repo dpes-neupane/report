@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    
+    <title>
+        Report Table
+    </title>
+
+    
+</head>
+<body>
+    
+    
+    <div id="Report">
+    <table border="1" cellpadding = "10" cellspacing = "0">
+            <tr>
+                <th>Product</th> <th>Year</th> <th>Min</th> <th>Max</th> <th>Avg</th>
+            </tr>
+            {% for pr, y, m, ma, avg in all_values %}
+                    
+                <tr><td id="product">{{pr}}</td>
+                    <td  class="year">{{y}}</td>
+                    <td class="min">{{m}}</td>
+                    <td class="max">{{ma}}</td>
+                    <td class="avg">{{avg}}</td>
+                    
+                </tr>
+            {% endfor %}
+    </table>
+    <script>
+        var yearElement = document.getElementsByClassName("year");
+        var avgElement = document.getElementsByClassName("avg");
+        for (var i=0; i<yearElement.length; i++)
+        {
+            
+            matches = yearElement[i].innerHTML.match(/\d+/g);
+            yearElement[i].innerHTML = matches[0] + "-" + matches[1];
+            
+        }
+        for ( var i = 0; i < avgElement.length; i++){
+            let matches = avgElement[i].innerHTML.match(/\D0/g);
+            if (matches != null) 
+            {
+                avgElement[i].innerHTML = avgElement[i].innerHTML - matches[0];
+                
+            }
+        }   
+
+        </script>
+    
+</div>
+    
+        
+    
+    
+
+</body>
+</html>
