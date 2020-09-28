@@ -1,4 +1,5 @@
 # **Report Generator**
+I just wanted to know how to deploy a site on heroku and the table is not so important. It can be seen in [https://reportapp-python.herokuapp.com/petroleum_report/]
 
 This app generates the min, max, average for the interval of 5 years. The data has been fetched and added to the database. 
 
@@ -23,11 +24,7 @@ And after installation,
 
 1. Make all the migrations by running `python manage.py makemigrations` command from the directory with the manage.py file.
 2. Migrate the files using the `python manage.py migrate` command.
-3. Run the manage.py shell using `python manage.py shell` command.
-4. In the shell import the __add_data__ and __download_json__ located in the petroleum_report folder.
-5. Execute the functions by `exec(open(path_to_file).read())`. If all went well then no error should occur!
-6. Exit from the shell.(You can test the whether the data is there or not before exiting, please refer to [django making queries](https://docs.djangoproject.com/en/3.1/topics/db/queries/) to do this)
-6. Run `python manage.py runserver`, if you want to run this app locally.
+3. Run `python manage.py runserver`, if you want to run this app locally.
 
 
 
