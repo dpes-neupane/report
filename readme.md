@@ -1,5 +1,5 @@
 # **Report Generator**
-I just wanted to know how to deploy a site on heroku and the table is not so important. It can be seen in [https://reportapp-python.herokuapp.com/petroleum_report/]
+I just wanted to know how to deploy a site on heroku and the table is not so important. It can be seen in (https://reportapp-python.herokuapp.com/petroleum_report/)
 
 This app generates the min, max, average for the interval of 5 years. The data has been fetched and added to the database. 
 
